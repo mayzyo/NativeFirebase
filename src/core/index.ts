@@ -1,7 +1,7 @@
 import Authentication from './authentication'
-import Debugger from './debugger'
+import Home from './home'
 
 export {
     Authentication,
-    Debugger
+    Home
 }

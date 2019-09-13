@@ -1,15 +1,15 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import { Authentication, Debugger } from '../core'
+import { Authentication, Home } from '../core'
 
 const MainNavigator = createStackNavigator(
     {
-        Debugger: {
-            screen: Debugger,
+        Home: {
+            screen: Home,
         },
     },
     {
-        initialRouteName: 'Debugger',
+        initialRouteName: 'Home',
         defaultNavigationOptions: () => ({ header: null }),
         // transitionConfig: stackTransition
     },
@@ -26,7 +26,7 @@ export default createAppContainer(
             ),
         },
         {
-          initialRouteName: 'Auth',
+          initialRouteName: 'App',
         }
     )
 )
