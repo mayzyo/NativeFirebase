@@ -9,6 +9,7 @@ export default (props: Home) => {
 
     useEffect(() => {
         const sub = props.navigation.addListener('didFocus', () => {
+            props.navigation.navigate('Auth')
             const user = auth().currentUser
             user ? setCurrent(user.email || 'no email') : props.navigation.navigate('Auth')
         })
