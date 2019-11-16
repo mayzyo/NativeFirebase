@@ -3,6 +3,7 @@ import auth from '@react-native-firebase/auth'
 import { Container, Content, Form, Item, Input, Label, Button, Text } from 'native-base'
 import { Row, Grid } from 'react-native-easy-grid'
 import { NavigationStackScreenProps } from 'react-navigation-stack'
+import { Platform } from 'react-native'
 
 export default (props: NavigationStackScreenProps) => {
 
@@ -22,19 +23,20 @@ export default (props: NavigationStackScreenProps) => {
                 <Row>
                     <Content>
                         <Form>
-                            <Item floatingLabel>
+                            <Item floatingLabel={Platform.OS == 'android'}>
                                 <Label>Username</Label>
                                 <Input 
                                 value={form.username}
                                 onChangeText={text => setForm(p => ({ ...p, username: text }))} 
+                                
                                 />
                             </Item>
-                            <Item floatingLabel>
+                            <Item floatingLabel={Platform.OS == 'android'}>
                                 <Label>Password</Label>
                                 <Input 
                                 value={form.password}
                                 onChangeText={text => setForm(p => ({ ...p, password: text }))} 
-
+                                secureTextEntry
                                 />
                             </Item>
                             <Button
