@@ -44,6 +44,8 @@ buck-out/
 \.buckd/
 # *.keystore
 !debug.keystore
+GoogleService-Info.plist
+google-services.json
 
 # fastlane
 #

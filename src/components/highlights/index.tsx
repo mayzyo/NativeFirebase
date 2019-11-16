@@ -28,7 +28,7 @@ export default (props: NavigationStackScreenProps) => {
                 <Text>Logged In: {current}</Text>
             </View>
             { projects.map(el => 
-                <TouchableWithoutFeedback onPress={() => props.navigation.navigate('Details', el)} >
+                <TouchableWithoutFeedback onPress={() => props.navigation.navigate('Details', el)} key={el.uri}>
                     <ArticleCard
                     title={el.name}
                     subtitle={el.created.toString()}
