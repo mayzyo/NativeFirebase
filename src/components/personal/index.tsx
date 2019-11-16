@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import auth from '@react-native-firebase/auth'
 import { Container, Content, Form, Item, Input, Label, Button, Text } from 'native-base'
 import { Row, Grid } from 'react-native-easy-grid'
-import { NavigationScreenProps } from 'react-navigation'
+import { NavigationStackScreenProps } from 'react-navigation-stack'
 
-export default (props: Authentication) => {
+export default (props: NavigationStackScreenProps) => {
 
     const [form, setForm] = useState({ username: '', password: '' })
 
@@ -50,8 +50,4 @@ export default (props: Authentication) => {
             </Grid>
         </Container>
     )
-}
-
-export interface Authentication extends NavigationScreenProps {
-
 }
